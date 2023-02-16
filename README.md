@@ -1,7 +1,6 @@
-Proiect POS Spotify anul 4.
-Contine:
-- un serviciu IDM cu SOAP in Python pentru useri si roluri
-- un serviciu RESTful pentru artisti si melodii in Java, Spring Boot, folosindu-ne de MariaDB
-- un serviciu RESTful pentru playlist-uri (tot in Java, Spring Boot) cu conexiune cu baza de date de tip NoSQL (MongoDB)
-- interfata in REACT (nu e terminata complet, atentia fiind concentrata pe baza de backend)
-- un server de tip Eureka si un Gateway pentru serviciile RESTful
+This is a project made for service oriented programming course. It contains:
+- an IDM service that makes use of SOAP, written in Python that manages the users and roles of the application (these are stored in a SQL database)
+- a RESTful service for the artists and the songs, written in java, Spring Boot, using a SQL database (MariaDB)
+- a RESTful service for the playlists that makes use of the previous one in order to add a song to the database and the data is store in a NoSQL database (i used MongoDB)
+- Eureka server to which my RESTful services connect and a Gateway
+- User interface implemented in REACT
