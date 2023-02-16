@@ -1,0 +1,24 @@
+server:
+  port: 8088
+  hostname: localhost
+spring:
+  application:
+    name: API_GATEWAY
+  cloud:
+    inetutils:
+      preferred-networks: 192.168.0.0/16, 10.0.0.0/8
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+          hostname: localhost
+      routes:
+        - id: MEDIA_SERVICE
+          uri: http://127.0.0.1:8093
+          predicates:
+            - Path=/api/songcollection/**
+        - id: PLAYLIST_SERVICE
+          uri: http://127.0.0.1:8099
+          predicates:
+            - Path=/playlists/**

@@ -1,0 +1,826 @@
+{
+	"info": {
+		"_postman_id": "21653cbd-74e6-48e2-bdd3-0e3b78a0a845",
+		"name": "POS_media",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getSongById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg4MjQwLCJqdGkiOiIzNTAzYWUxOC1hYjQyLTRjMDUtOGExZS04NzFlNzZmNTc4MTgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.HWxOusLIE2BZ9EbAS-rpruLDfFaa42TyforxluofIX4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8088/api/songcollection/songs/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"songcollection",
+						"songs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getArtistByUuid",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg4MjQwLCJqdGkiOiIzNTAzYWUxOC1hYjQyLTRjMDUtOGExZS04NzFlNzZmNTc4MTgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.HWxOusLIE2BZ9EbAS-rpruLDfFaa42TyforxluofIX4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8088/api/songcollection/artists/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"songcollection",
+						"artists",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSongsForArtist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8088/api/songcollection/artists/1/songs",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"songcollection",
+						"artists",
+						"1",
+						"songs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paginationSongs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg4MjQwLCJqdGkiOiIzNTAzYWUxOC1hYjQyLTRjMDUtOGExZS04NzFlNzZmNTc4MTgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.HWxOusLIE2BZ9EbAS-rpruLDfFaa42TyforxluofIX4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8093/api/songcollection/songs?page=1&items_per_page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"songcollection",
+						"songs"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "items_per_page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllArtists",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg4MjQwLCJqdGkiOiIzNTAzYWUxOC1hYjQyLTRjMDUtOGExZS04NzFlNzZmNTc4MTgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.HWxOusLIE2BZ9EbAS-rpruLDfFaa42TyforxluofIX4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8093/api/songcollection/artists",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"songcollection",
+						"artists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "artistsPagination",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0MzQwNDA3LCJqdGkiOiIwYmU5OGUyZC1lZjEzLTRjMmQtODE4OS02ZTAxMjUzYTUxNDEiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.iG876HTJK0VmOGAgt5jS8RY4qjuxFoPsIywJaTkxPC4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8093/api/songcollection/artists?page=0&items_per_page=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"songcollection",
+						"artists"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "items_per_page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getArtistSongsByArtistUuid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8093/api/songcollection/songs/1/artists",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"songcollection",
+						"songs",
+						"1",
+						"artists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPaginatedSongsImplicitItemsPerPage",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg4MjQwLCJqdGkiOiIzNTAzYWUxOC1hYjQyLTRjMDUtOGExZS04NzFlNzZmNTc4MTgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.HWxOusLIE2BZ9EbAS-rpruLDfFaa42TyforxluofIX4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8093/api/songcollection/songs?page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"songcollection",
+						"songs"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getArtistByNameExactMatch",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg4MjQwLCJqdGkiOiIzNTAzYWUxOC1hYjQyLTRjMDUtOGExZS04NzFlNzZmNTc4MTgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.HWxOusLIE2BZ9EbAS-rpruLDfFaa42TyforxluofIX4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8088/api/songcollection/artists?firstname=elena&match=exact",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"songcollection",
+						"artists"
+					],
+					"query": [
+						{
+							"key": "firstname",
+							"value": "elena"
+						},
+						{
+							"key": "match",
+							"value": "exact"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getArtistByNamePartialMatch",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg4MjQwLCJqdGkiOiIzNTAzYWUxOC1hYjQyLTRjMDUtOGExZS04NzFlNzZmNTc4MTgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.HWxOusLIE2BZ9EbAS-rpruLDfFaa42TyforxluofIX4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8093/api/songcollection/artists/?name=elen",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"songcollection",
+						"artists",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "elen"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSongByPartialTitle",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE0NSwiZXhwIjoxNjc0MzQyMjQ4LCJqdGkiOiI5OGZkMTdlYS1lNzg3LTQzZmUtYWY0Ni02ODk5ZGZmZmE5YjEiLCJyb2xlIjoiWydjb250ZW50X21hbmFnZXInXSJ9.mCs-BO5BHXiq9x3KhYQHWDfmxKGwk_JnWSIXpe8dVVs",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8093/api/songcollection/songs/?title=Ti",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"songcollection",
+						"songs",
+						""
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Ti"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSongByTitleExact",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE0NSwiZXhwIjoxNjc0MzQyMjQ4LCJqdGkiOiI5OGZkMTdlYS1lNzg3LTQzZmUtYWY0Ni02ODk5ZGZmZmE5YjEiLCJyb2xlIjoiWydjb250ZW50X21hbmFnZXInXSJ9.mCs-BO5BHXiq9x3KhYQHWDfmxKGwk_JnWSIXpe8dVVs",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8088/api/songcollection/songs/?title=Title&match=exact",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"songcollection",
+						"songs",
+						""
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Title"
+						},
+						{
+							"key": "match",
+							"value": "exact"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSongByYearOfRelease",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg4MjQwLCJqdGkiOiIzNTAzYWUxOC1hYjQyLTRjMDUtOGExZS04NzFlNzZmNTc4MTgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.HWxOusLIE2BZ9EbAS-rpruLDfFaa42TyforxluofIX4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8093/api/songcollection/songs?year=2020",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"songcollection",
+						"songs"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2020"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSongByGenre",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg4MjQwLCJqdGkiOiIzNTAzYWUxOC1hYjQyLTRjMDUtOGExZS04NzFlNzZmNTc4MTgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.HWxOusLIE2BZ9EbAS-rpruLDfFaa42TyforxluofIX4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8093/api/songcollection/songs?genre=genre",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"songcollection",
+						"songs"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "genre"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getArtistByLastName",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg4MjQwLCJqdGkiOiIzNTAzYWUxOC1hYjQyLTRjMDUtOGExZS04NzFlNzZmNTc4MTgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.HWxOusLIE2BZ9EbAS-rpruLDfFaa42TyforxluofIX4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8093/api/songcollection/artists?lastname=elena",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"songcollection",
+						"artists"
+					],
+					"query": [
+						{
+							"key": "lastname",
+							"value": "elena"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addArtist",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg4MjQwLCJqdGkiOiIzNTAzYWUxOC1hYjQyLTRjMDUtOGExZS04NzFlNzZmNTc4MTgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.HWxOusLIE2BZ9EbAS-rpruLDfFaa42TyforxluofIX4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uuid\":\"b777024b-3a4d-4db9-9bc0-7cc79666bbc2\",\r\n    \"first_name\":\"newArtist\",\r\n    \"last_name\":\"newArtist\",\r\n    \"nationality\":\"ro\",\r\n    \"birthDate\":\"2000-10-10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8088/api/songcollection/artists/add_artist",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"songcollection",
+						"artists",
+						"add_artist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addSong",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg4MjQwLCJqdGkiOiIzNTAzYWUxOC1hYjQyLTRjMDUtOGExZS04NzFlNzZmNTc4MTgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.HWxOusLIE2BZ9EbAS-rpruLDfFaa42TyforxluofIX4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Spune tu, vant\",\r\n    \"duration\": 200,\r\n    \"language\":\"english\",\r\n    \"releaseDate\":\"2000-10-10\",\r\n    \"genre\":\"rock\",\r\n    \"type\":\"SONG\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8088/api/songcollection/songs/add_song",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"songcollection",
+						"songs",
+						"add_song"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "assignSongToArtist",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg4MjQwLCJqdGkiOiIzNTAzYWUxOC1hYjQyLTRjMDUtOGExZS04NzFlNzZmNTc4MTgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.HWxOusLIE2BZ9EbAS-rpruLDfFaa42TyforxluofIX4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8093/api/songcollection/3/add_song/70532070-83fb-4b4d-8648-36551860a475",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"songcollection",
+						"3",
+						"add_song",
+						"70532070-83fb-4b4d-8648-36551860a475"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "docs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8093/api/docs",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8093",
+					"path": [
+						"api",
+						"docs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_title_song",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg4MjQwLCJqdGkiOiIzNTAzYWUxOC1hYjQyLTRjMDUtOGExZS04NzFlNzZmNTc4MTgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.HWxOusLIE2BZ9EbAS-rpruLDfFaa42TyforxluofIX4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"title\":\"spiders\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8088/api/songcollection/songs/update_title",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"songcollection",
+						"songs",
+						"update_title"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_song",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg4MjQwLCJqdGkiOiIzNTAzYWUxOC1hYjQyLTRjMDUtOGExZS04NzFlNzZmNTc4MTgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.HWxOusLIE2BZ9EbAS-rpruLDfFaa42TyforxluofIX4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8088/api/songcollection/songs/delete_song/34",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"songcollection",
+						"songs",
+						"delete_song",
+						"34"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_song_title",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg4MjQwLCJqdGkiOiIzNTAzYWUxOC1hYjQyLTRjMDUtOGExZS04NzFlNzZmNTc4MTgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.HWxOusLIE2BZ9EbAS-rpruLDfFaa42TyforxluofIX4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 14,\r\n    \"title\": \"NewTitle\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8088/api/songcollection/songs/update_title",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"songcollection",
+						"songs",
+						"update_title"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,615 @@
+{
+	"info": {
+		"_postman_id": "d507b0c6-69d3-45c4-98d2-e4bfe301e2db",
+		"name": "POS_idm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getUsers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0MzM3OTgxLCJqdGkiOiJlNDRhYmQ1ZC05NTNhLTQ5OGUtODJhMy0wYzQ0YTEyNTI2YmUiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.L_NhWW3odkpip86AjVDbI4VNV5rjUbFnL_53VhhXfdI",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\n    xmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n        <soap11env:Body>\r\n            <sample:getusers></sample:getusers>\r\n        </soap11env:Body>\r\n</soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0MzgyMTUwLCJqdGkiOiJiNzg1YmZiNi00NGRlLTQ5OGQtYTEwNC1iNDhlMTJjZDZjNzUiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.zm7vDiP4nSHr-vnChueaVS_eLT6Smpu-GqDOlT4dtVc",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\n    xmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n        <soap11env:Body>\r\n            <sample:register_user>\r\n                <sample:username>h</sample:username>\r\n                <sample:password>h</sample:password>\r\n            </sample:register_user>\r\n        </soap11env:Body>\r\n    </soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addRoleToUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjczMDIyNzQ2LCJqdGkiOiIxODZkNWFkNS0xOTdjLTRjOGItYjYwNy1hY2NjNTc3NmI4ZjAiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjbGllbnQnXSJ9.5tpJA_PHeilwMRELehH0fvN51YxTKmRLG0z9XbyI0Wo",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\nxmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n    <soap11env:Body>\r\n        <sample:add_user_role>\r\n            <sample:id>132</sample:id>\r\n            <sample:rol>client</sample:rol>\r\n        </sample:add_user_role>\r\n    </soap11env:Body>\r\n</soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRoles",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0MzgyMTUwLCJqdGkiOiJiNzg1YmZiNi00NGRlLTQ5OGQtYTEwNC1iNDhlMTJjZDZjNzUiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.zm7vDiP4nSHr-vnChueaVS_eLT6Smpu-GqDOlT4dtVc",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\nxmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n    <soap11env:Body>\r\n        <sample:get_roles></sample:get_roles>\r\n    </soap11env:Body>\r\n</soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addRole",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0MzgyMTUwLCJqdGkiOiJiNzg1YmZiNi00NGRlLTQ5OGQtYTEwNC1iNDhlMTJjZDZjNzUiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.zm7vDiP4nSHr-vnChueaVS_eLT6Smpu-GqDOlT4dtVc",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\nxmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n    <soap11env:Body>\r\n        <sample:add_role>\r\n            <sample:value>new_rol</sample:value>\r\n        </sample:add_role>\r\n    </soap11env:Body>\r\n</soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg3MjEyLCJqdGkiOiJiYWExZWQyNy1hM2MzLTQwODQtYjFiYi05ZmUwNzA4MDJjOGUiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.p6Bc9wDhvUSK77tQpX7f87y2fF3ONrbE72y1hVZI748",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\nxmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n    <soap11env:Body>\r\n        <sample:update_user_password>\r\n            <sample:id>133</sample:id>\r\n             <sample:password>elena</sample:password>\r\n        </sample:update_user_password>\r\n    </soap11env:Body>\r\n</soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUsername",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg3MjEyLCJqdGkiOiJiYWExZWQyNy1hM2MzLTQwODQtYjFiYi05ZmUwNzA4MDJjOGUiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.p6Bc9wDhvUSK77tQpX7f87y2fF3ONrbE72y1hVZI748",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\nxmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n    <soap11env:Body>\r\n        <sample:update_user_username>\r\n            <sample:id>146</sample:id>\r\n             <sample:new_username>NewUsername</sample:new_username>\r\n        </sample:update_user_username>\r\n    </soap11env:Body>\r\n</soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRolesOfUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg2MDQ5LCJqdGkiOiJmZmVmN2ZhZC0zNjU4LTQxNjMtOGJkZi00ZDViZWYzMDQ0YzgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.6DwNDGB05-xGJU99PeiGAkipYj_lNmTnhGygcvlsO5s",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\nxmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n    <soap11env:Body>\r\n        <sample:get_roles_for_user_by_username>\r\n            <sample:username>NewAna</sample:username>\r\n        </sample:get_roles_for_user_by_username>\r\n    </soap11env:Body>\r\n</soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserByUsername",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg2MDQ5LCJqdGkiOiJmZmVmN2ZhZC0zNjU4LTQxNjMtOGJkZi00ZDViZWYzMDQ0YzgiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.6DwNDGB05-xGJU99PeiGAkipYj_lNmTnhGygcvlsO5s",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\nxmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n    <soap11env:Body>\r\n        <sample:get_user_by_username>\r\n            <sample:username>Elena</sample:username>\r\n        </sample:get_user_by_username>\r\n    </soap11env:Body>\r\n</soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserById",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg3MjEyLCJqdGkiOiJiYWExZWQyNy1hM2MzLTQwODQtYjFiYi05ZmUwNzA4MDJjOGUiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.p6Bc9wDhvUSK77tQpX7f87y2fF3ONrbE72y1hVZI748",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\nxmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n    <soap11env:Body>\r\n        <sample:get_user_by_id>\r\n            <sample:id>146</sample:id>\r\n        </sample:get_user_by_id>\r\n    </soap11env:Body>\r\n</soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeRoleFromUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg3MjEyLCJqdGkiOiJiYWExZWQyNy1hM2MzLTQwODQtYjFiYi05ZmUwNzA4MDJjOGUiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.p6Bc9wDhvUSK77tQpX7f87y2fF3ONrbE72y1hVZI748",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\nxmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n    <soap11env:Body>\r\n        <sample:remove_role_by_username>\r\n            <sample:id>146</sample:id>\r\n            <sample:role>content_manager</sample:role>\r\n        </sample:remove_role_by_username>\r\n    </soap11env:Body>\r\n</soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\nxmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n    <soap11env:Body>\r\n        <sample:login>\r\n            <sample:username>newUser</sample:username>\r\n            <sample:password>newUser</sample:password>\r\n        </sample:login>\r\n    </soap11env:Body>\r\n</soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCurrentUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg3MjEyLCJqdGkiOiJiYWExZWQyNy1hM2MzLTQwODQtYjFiYi05ZmUwNzA4MDJjOGUiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.p6Bc9wDhvUSK77tQpX7f87y2fF3ONrbE72y1hVZI748",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\n      xmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n          <soap11env:Body>\r\n              <sample:get_current_user></sample:get_current_user>\r\n          </soap11env:Body>\r\n      </soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authorize",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg3MjEyLCJqdGkiOiJiYWExZWQyNy1hM2MzLTQwODQtYjFiYi05ZmUwNzA4MDJjOGUiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.p6Bc9wDhvUSK77tQpX7f87y2fF3ONrbE72y1hVZI748",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\nxmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n    <soap11env:Body>\r\n        <sample:authorize></sample:authorize>\r\n    </soap11env:Body>\r\n</soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg3MjEyLCJqdGkiOiJiYWExZWQyNy1hM2MzLTQwODQtYjFiYi05ZmUwNzA4MDJjOGUiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.p6Bc9wDhvUSK77tQpX7f87y2fF3ONrbE72y1hVZI748",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\nxmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n    <soap11env:Body>\r\n        <sample:logout></sample:logout>\r\n    </soap11env:Body>\r\n</soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalidateUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg3MjEyLCJqdGkiOiJiYWExZWQyNy1hM2MzLTQwODQtYjFiYi05ZmUwNzA4MDJjOGUiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.p6Bc9wDhvUSK77tQpX7f87y2fF3ONrbE72y1hVZI748",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\nxmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n    <soap11env:Body>\r\n        <sample:adm_invalidate_user>\r\n            <sample:id>135</sample:id>\r\n        </sample:adm_invalidate_user>\r\n    </soap11env:Body>\r\n</soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerUserNotAuthorized",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE0NSwiZXhwIjoxNjc0MzgyMDA4LCJqdGkiOiI3ZWM0ODI1MC0zOGFiLTQ1YWItYjk3OS05ZTc1MWRjZGJkNGEiLCJyb2xlIjoiWydjb250ZW50X21hbmFnZXInXSJ9.QS__HTc2vsQwrDpFa2jXY0EXEjOt6qbcYZpik_AkQqQ",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\n    xmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n        <soap11env:Body>\r\n            <sample:register_user>\r\n                <sample:username>newUser2</sample:username>\r\n                <sample:password>newUser2</sample:password>\r\n            </sample:register_user>\r\n        </soap11env:Body>\r\n    </soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validate_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg3NzkyLCJqdGkiOiI3OWFmNTRhYy0xNTc0LTQ3M2MtYjhlMi1kN2UyZDI5YWIyZjkiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.K-pFhnUTttOE-dhvebEPotKFmDPBxv-QoNDwVWyDiWs",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap11env:Envelope \r\nxmlns:soap11env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sample=\"services.users.soap\">\r\n    <soap11env:Body>\r\n        <sample:adm_validate_user>\r\n            <sample:id>135</sample:id>\r\n        </sample:adm_validate_user>\r\n    </soap11env:Body>\r\n</soap11env:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		}
+	]
+}

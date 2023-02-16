@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "1974f785-8bd0-4127-ae77-73886f60a45e",
+		"name": "POS_playlists",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "firstGetAllPlaylists",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "dc4c4824-ba31-42d0-b283-725cde29eb02",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nickname\" : \"Scooby\",\r\n    \"password\" : \"Doo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8099/playlists/get_all_playlists/133",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8099",
+					"path": [
+						"playlists",
+						"get_all_playlists",
+						"133"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addSongToPlaylist",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8099/add_song/13/to_playlist/new",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8099",
+					"path": [
+						"add_song",
+						"13",
+						"to_playlist",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "playlistsPaginated",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg5NTgwLCJqdGkiOiJkMTg2NmQ5NS1kNzNiLTRlNGQtYjQxMy1jOTBjZGQ4MjlkNmQiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.CdwtarP_zoIU3pel5rO2vapCCgNP-yzoPiHUfIyiho0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8099/playlists?page=1&items_per_page=3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8099",
+					"path": [
+						"playlists"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "items_per_page",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createPlaylisy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg5NTgwLCJqdGkiOiJkMTg2NmQ5NS1kNzNiLTRlNGQtYjQxMy1jOTBjZGQ4MjlkNmQiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.CdwtarP_zoIU3pel5rO2vapCCgNP-yzoPiHUfIyiho0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8099/playlists/create_playlist/135/Relax",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8099",
+					"path": [
+						"playlists",
+						"create_playlist",
+						"135",
+						"Relax"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPlaylistsThatBelongToACertainUser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg5NTgwLCJqdGkiOiJkMTg2NmQ5NS1kNzNiLTRlNGQtYjQxMy1jOTBjZGQ4MjlkNmQiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.CdwtarP_zoIU3pel5rO2vapCCgNP-yzoPiHUfIyiho0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8099/playlists/get_all_playlists/135",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8099",
+					"path": [
+						"playlists",
+						"get_all_playlists",
+						"135"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changePlaylistTitle",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg5NTgwLCJqdGkiOiJkMTg2NmQ5NS1kNzNiLTRlNGQtYjQxMy1jOTBjZGQ4MjlkNmQiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.CdwtarP_zoIU3pel5rO2vapCCgNP-yzoPiHUfIyiho0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8099/playlists/change_playlist_title/new/newTitle",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8099",
+					"path": [
+						"playlists",
+						"change_playlist_title",
+						"new",
+						"newTitle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePlaylist",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzMywiZXhwIjoxNjc0Mzg5NTgwLCJqdGkiOiJkMTg2NmQ5NS1kNzNiLTRlNGQtYjQxMy1jOTBjZGQ4MjlkNmQiLCJyb2xlIjoiWydhZG1pbmlzdHJhdG9yX2FwbGljYXRpZScsICdjb250ZW50X21hbmFnZXInLCAnYXJ0aXN0JywgJ2NsaWVudCddIn0.CdwtarP_zoIU3pel5rO2vapCCgNP-yzoPiHUfIyiho0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8099/playlists/delete_playlist/63a83d49b1dd7c7658b3dbb6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8099",
+					"path": [
+						"playlists",
+						"delete_playlist",
+						"63a83d49b1dd7c7658b3dbb6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
